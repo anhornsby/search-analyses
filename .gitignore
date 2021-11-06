@@ -1,0 +1,13 @@
+data/
+notebooks/
+*.pyc
+*.csv
+*.eps
+*.png
+*.pdf
+*.ipynb
+.cache
+.config
+*.DS_Store
+*.bash_history
+.ipynb_checkpoints/
