@@ -1,6 +1,6 @@
 # Food Fluency Retrieval
 
-[![![CircleCI](https://circleci.com/gh/anhornsby/search-analyses/tree/main.svg?style=svg)](https://circleci.com/gh/anhornsby/search-analyses/tree/main)
+[![CircleCI](https://circleci.com/gh/anhornsby/search-analyses/tree/main.svg?style=svg)](https://circleci.com/gh/anhornsby/search-analyses/tree/main)
 [![Docker](https://img.shields.io/badge/Docker-Open%20in%20DockerHub-blue.svg)](https://cloud.docker.com/repository/docker/adamnhornsby/fluency-model)
 [![OSF](https://img.shields.io/badge/OSF-View%20data%20on%20OSF-lightgrey.svg)](https://osf.io/xw8zk/)
 
