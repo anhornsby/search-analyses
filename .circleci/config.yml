@@ -12,10 +12,10 @@ dist: xenial
 
 jobs:
   build:
-    - image: circleci/python:3.6.4
-      auth:
-        username: $DOCKER_USERNAME
-        password: $DOCKER_PASSWORD
+    image: circleci/python:3.6.4
+    auth:
+      username: $DOCKER_USERNAME
+      password: $DOCKER_PASSWORD
     install:
       - pip install --user -U pip
       - pip install --user osfclient
@@ -30,8 +30,8 @@ jobs:
       # now test that it works by running the simulation
       - run: docker run adamnhornsby/fluency-model:latest python3 ./ fit all
   deploy:
-    - image: circleci/python:3.6.4
-      auth:
+    image: circleci/python:3.6.4
+    auth:
         username: $DOCKER_USERNAME
         password: $DOCKER_PASSWORD
     install:
