@@ -11,29 +11,28 @@ sudo: required
 dist: xenial
 
 jobs:
-  include:
-    - stage: build
-      install:
-        - pip install --user -U pip
-        - pip install --user osfclient
-      script: 
-        # pull the data from public osf repo
-        # note that secure environment variables are set within travis
-        - osf fetch data/fluency/transition_probs.csv data/transition_probs.csv
-        # now lets build the container
-        # - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-        - make build
-        # now test that it works by running the simulation
-        - docker run adamnhornsby/fluency-model:latest python3 ./ fit all
-    - stage: deploy
-      install:
-        - pip install --user -U pip
-        - pip install --user osfclient
-      script: 
-        # pull the data from public osf repo
-        - pip install osfclient
-        - osf fetch data/fluency/transition_probs.csv data/transition_probs.csv
-        # build and deploy the container image to dockerhub
-        - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-        - make build
-        - make deploy
+  build:
+    install:
+      - pip install --user -U pip
+      - pip install --user osfclient
+    script: 
+      # pull the data from public osf repo
+      # note that secure environment variables are set within travis
+      - osf fetch data/fluency/transition_probs.csv data/transition_probs.csv
+      # now lets build the container
+      # - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+      - make build
+      # now test that it works by running the simulation
+      - docker run adamnhornsby/fluency-model:latest python3 ./ fit all
+  deploy:
+    install:
+      - pip install --user -U pip
+      - pip install --user osfclient
+    script: 
+      # pull the data from public osf repo
+      - pip install osfclient
+      - osf fetch data/fluency/transition_probs.csv data/transition_probs.csv
+      # build and deploy the container image to dockerhub
+      - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+      - make build
+      - make deploy
