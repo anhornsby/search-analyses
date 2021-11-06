@@ -22,8 +22,8 @@ jobs:
       # pull the data from public osf repo
       # note that secure environment variables are set within travis
       - run: sudo pip3 install -U pip
-      - run: sudo pip3 install -U pyopenssl
       - run: sudo pip3 install osfclient
+      - run: sudo pip3 install pyopenssl
       - run: osf fetch data/fluency/transition_probs.csv data/transition_probs.csv
       # now lets build the container
       # - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
