@@ -59,6 +59,4 @@ COPY memory_analyses/ /usr/local/data/memory_analyses/
 COPY config/ /usr/local/data/config/
 COPY __main__.py /usr/local/data/
 
-COPY entrypoint.sh /entrypoint.sh
-
 WORKDIR /usr/local/data/
