@@ -13,7 +13,7 @@ dist: xenial
 jobs:
   build:
     docker:
-      - image: circleci/python:3.6.4
+      - image: circleci/python:3.8.6
         auth:
           username: $DOCKER_USERNAME
           password: $DOCKER_PASSWORD
@@ -24,7 +24,6 @@ jobs:
       - run: sudo pip3 install -U pip
       - run: sudo pip3 install osfclient
       - run: sudo pip3 install -U pyopenssl
-      - run: sudo pip install -U pyopenssl
       - run: export PYTHONHTTPSVERIFY=0
       - run: osf fetch data/fluency/transition_probs.csv data/transition_probs.csv
       # now lets build the container
