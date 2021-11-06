@@ -24,8 +24,9 @@ jobs:
       - run: sudo pip3 install -U pip
       - run: sudo pip3 install osfclient
       - run: sudo pip3 install -U pyopenssl
-      - run: wget https://curl.haxx.se/ca/cacert.pem --no-check-certificate
-      - run: export SSL_CERT_FILE=$HOME/cacert.pem
+      - run: sudo pip install -U pyopenssl
+      - run: sudo pip3 install --upgrade certifi
+      - run: sudo pip install --upgrade certifi
       - run: osf fetch data/fluency/transition_probs.csv data/transition_probs.csv
       # now lets build the container
       # - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
