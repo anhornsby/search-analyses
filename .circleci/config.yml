@@ -12,10 +12,15 @@ dist: xenial
 
 jobs:
   build:
+    - image: circleci/python:3.6.4
+      auth:
+        username: $DOCKER_USERNAME
+        password: $DOCKER_PASSWORD
     install:
       - pip install --user -U pip
       - pip install --user osfclient
     steps: 
+      - checkout
       # pull the data from public osf repo
       # note that secure environment variables are set within travis
       - run: osf fetch data/fluency/transition_probs.csv data/transition_probs.csv
@@ -25,10 +30,16 @@ jobs:
       # now test that it works by running the simulation
       - run: docker run adamnhornsby/fluency-model:latest python3 ./ fit all
   deploy:
+    - image: circleci/python:3.6.4
+      auth:
+        username: $DOCKER_USERNAME
+        password: $DOCKER_PASSWORD
+    install:
     install:
       - pip install --user -U pip
       - pip install --user osfclient
     steps: 
+      - checkout
       # pull the data from public osf repo
       # - run: pip install osfclient
       - run: osf fetch data/fluency/transition_probs.csv data/transition_probs.csv
