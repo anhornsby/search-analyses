@@ -40,11 +40,13 @@ jobs:
           password: $DOCKER_PASSWORD
     steps: 
       - checkout
-      - run: sudo pip3 install pip
-      - run: sudo pip3 install osfclient
-      - run: osf fetch data/fluency/transition_probs.csv data/transition_probs.csv
+      - setup_remote_docker
       # pull the data from public osf repo
       # note that secure environment variables are set within travis
+      - run: sudo pip3 install -U pip
+      - run: sudo pip3 install osfclient
+      - run: sudo pip3 install -U pyopenssl
+      - run: export PYTHONHTTPSVERIFY=0
       - run: osf fetch data/fluency/transition_probs.csv data/transition_probs.csv
       # now lets build the container
       # - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
