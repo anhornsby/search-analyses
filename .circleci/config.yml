@@ -35,7 +35,6 @@ jobs:
         username: $DOCKER_USERNAME
         password: $DOCKER_PASSWORD
     install:
-    install:
       - pip install --user -U pip
       - pip install --user osfclient
     steps: 
