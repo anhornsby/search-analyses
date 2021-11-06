@@ -18,8 +18,8 @@ jobs:
           username: $DOCKER_USERNAME
           password: $DOCKER_PASSWORD
     steps: 
-      - run: pip install --user -U pip
-      - run: pip install --user osfclient
+      - run: pip install pip
+      - run: pip install osfclient
       - checkout
       # pull the data from public osf repo
       # note that secure environment variables are set within travis
@@ -36,8 +36,8 @@ jobs:
           username: $DOCKER_USERNAME
           password: $DOCKER_PASSWORD
     steps: 
-      - run: pip install --user -U pip
-      - run: pip install --user osfclient
+      - run: pip install pip
+      - run: pip install osfclient
       - checkout
       # pull the data from public osf repo
       # note that secure environment variables are set within travis
