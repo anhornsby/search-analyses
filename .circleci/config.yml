@@ -19,6 +19,7 @@ jobs:
           password: $DOCKER_PASSWORD
     steps: 
       - checkout
+      - setup_remote_docker
       # pull the data from public osf repo
       # note that secure environment variables are set within travis
       - run: sudo pip3 install -U pip
