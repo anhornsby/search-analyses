@@ -25,8 +25,7 @@ jobs:
       - run: sudo pip3 install osfclient
       - run: sudo pip3 install -U pyopenssl
       - run: sudo pip install -U pyopenssl
-      - run: sudo pip3 install --upgrade certifi
-      - run: sudo pip install --upgrade certifi
+      - run: export PYTHONHTTPSVERIFY=0
       - run: osf fetch data/fluency/transition_probs.csv data/transition_probs.csv
       # now lets build the container
       # - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
