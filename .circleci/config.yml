@@ -18,11 +18,11 @@ jobs:
           username: $DOCKER_USERNAME
           password: $DOCKER_PASSWORD
     steps: 
-      - run: pip3 install --user -U pip
-      - run: pip3 install --user osfclient
       - checkout
       # pull the data from public osf repo
       # note that secure environment variables are set within travis
+      - run: sudo pip3 install pip
+      - run: sudo pip3 install osfclient
       - run: osf fetch data/fluency/transition_probs.csv data/transition_probs.csv
       # now lets build the container
       # - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
