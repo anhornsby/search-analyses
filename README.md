@@ -1,12 +1,14 @@
-# Food Fluency Retrieval
+# Multi-cued retrieval model
 
 [![CircleCI](https://circleci.com/gh/anhornsby/search-analyses/tree/main.svg?style=svg&circle-token=10e16af263e92982d240579e9c78be8e57f6db08)](https://circleci.com/gh/anhornsby/search-analyses/tree/main)
 [![Docker](https://img.shields.io/badge/Docker-Open%20in%20DockerHub-blue.svg)](https://cloud.docker.com/repository/docker/adamnhornsby/fluency-model)
 [![OSF](https://img.shields.io/badge/OSF-View%20data%20on%20OSF-lightgrey.svg)](https://osf.io/xw8zk/)
 
-A repository for fitting retrieval models to sequential fluency data using knowledge representations estimated from consumer behaviour.
+A repository for fitting retrieval models to sequential fluency data using multiple knowledge representations estimated from consumer behaviour.
 
-The repository also shares representations of three long-term knowledge sources (episodic, semantic and hierarchical knowledge). 
+The repository also shares representations of three long-term knowledge sources; episodic, semantic and hierarchical knowledge. These have been estimated using consumer choice data.
+
+For more information, please see Hornsby & Love (2021), _Sequential consumer choice as multi-cued retrieval_. PsyArxIv. https://psyarxiv.com/cx9r4. Or the published version, when available.
 
 ## Data
 
@@ -54,7 +56,7 @@ See above for runtime options.
 
 ## Citation
 
-If you use this repository or the representations, please cite Hornsby & Love (2021).
+If you use this repository or the representations, please cite Hornsby & Love (2021), _Sequential consumer choice as multi-cued retrieval_. PsyArxIv. https://psyarxiv.com/cx9r4. Or the published version, when available.
 
 ## Contact
 
