@@ -4,7 +4,7 @@
 [![Docker](https://img.shields.io/badge/Docker-Open%20in%20DockerHub-blue.svg)](https://cloud.docker.com/repository/docker/adamnhornsby/fluency-model)
 [![OSF](https://img.shields.io/badge/OSF-View%20data%20on%20OSF-lightgrey.svg)](https://osf.io/xw8zk/)
 
-A repository for fitting retrieval models to sequential fluency data using multiple knowledge representations estimated from consumer behaviour.
+A repository for fitting retrieval models to sequential fluency data using multiple knowledge representations estimated from consumer behaviour. 
 
 The OSF repository also shares representations of three long-term knowledge sources; episodic, semantic and hierarchical knowledge. These have been estimated using consumer choice data.
 
@@ -12,7 +12,13 @@ For more information, please see Hornsby & Love (2022), _Sequential consumer cho
 
 ## Data
 
-Fluency data is located within [this OSF repository](https://osf.io/xw8zk/). This data is described in Section 3 of the Supplemental Materials in Hornsby & Love (2022).
+Fluency data is located within [this OSF repository](https://osf.io/xw8zk/). This data combines semantic fluency data of food items collected in the lab and 3 representations of food similarity estimated from real consumer behaviour.
+
+* Food fluency retrievals were collected in a lab task by Zemla, Cao, Mueller & Austerweil (2020), _SNAFU: The Semantic Network and Fluency Utility_ and shared via their [GitHub repository here](https://github.com/AusterweilLab/snafu-py).
+* 
+
+
+described in Section 3 of the Supplemental Materials in Hornsby & Love (2022).
 
 ## Using Docker
 
