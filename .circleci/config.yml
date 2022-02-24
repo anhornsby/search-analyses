@@ -41,7 +41,7 @@ jobs:
       - run: docker run adamnhornsby/fluency-model:latest python3 ./ fit all
   deploy:
     docker:
-      - image: circleci/python:3.6.4
+      - image: circleci/python:3.8.6
         auth:
           username: $DOCKER_USERNAME
           password: $DOCKER_PASSWORD
