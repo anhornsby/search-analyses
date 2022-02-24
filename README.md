@@ -6,13 +6,13 @@
 
 A repository for fitting retrieval models to sequential fluency data using multiple knowledge representations estimated from consumer behaviour.
 
-The repository also shares representations of three long-term knowledge sources; episodic, semantic and hierarchical knowledge. These have been estimated using consumer choice data.
+The OSF repository also shares representations of three long-term knowledge sources; episodic, semantic and hierarchical knowledge. These have been estimated using consumer choice data.
 
-For more information, please see Hornsby & Love (2021), _Sequential consumer choice as multi-cued retrieval_. PsyArxIv. https://psyarxiv.com/cx9r4. Or the published version, when available.
+For more information, please see Hornsby & Love (2022), _Sequential consumer choice as multi-cued retrieval_. Science Advances.
 
 ## Data
 
-Fluency data is located within [this OSF repository](https://osf.io/xw8zk/).
+Fluency data is located within [this OSF repository](https://osf.io/xw8zk/). This data is described in Section 3 of the Supplemental Materials in Hornsby & Love (2022).
 
 ## Using Docker
 
@@ -56,7 +56,7 @@ See above for runtime options.
 
 ## Citation
 
-If you use this repository or the representations, please cite Hornsby & Love (2021), _Sequential consumer choice as multi-cued retrieval_. PsyArxIv. https://psyarxiv.com/cx9r4. Or the published version, when available.
+If you use this repository or the representations, please cite Hornsby & Love (2022), _Sequential consumer choice as multi-cued retrieval_. Science Advances.
 
 ## Contact
 
